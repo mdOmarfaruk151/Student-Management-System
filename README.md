@@ -92,7 +92,7 @@ source venv/bin/activate  # Linux/Mac
 ```
 3. **Install Dependencies**
 ```bash
-pip install -r requirements.txt
+pip freeze > requirements.txt
 ```
 4. **Create Superuser (Admin Setup)**
 ```bash
