@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto mb-5">
+    <div class="mb-6 border-b pb-4">
+        <h1 class="text-3xl font-bold text-gray-800">{{ student.name }}</h1>
+        <p class="text-sm text-gray-500 mt-2">Student Details</p>
+    </div>
+
+    <div class="space-y-4">
+        <div class="grid grid-cols-2 gap-4 py-2 border-b">
+            <dt class="font-medium text-gray-600">Email</dt>
+            <dd class="text-gray-800">{{ student.email }}</dd>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 py-2 border-b">
+            <dt class="font-medium text-gray-600">Phone</dt>
+            <dd class="text-gray-800">{{ student.phone_number }}</dd>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 py-2">
+            <dt class="font-medium text-gray-600">Course</dt>
+            <dd class="text-gray-800">{{ student.course }}</dd>
+        </div>
+    </div>
+
+    <div class="mt-6">
+        <a href="{% url 'student_list' %}"
+           class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
+            ← Back to Students List
+        </a>
+    </div>
+</div>
+{% endblock %}

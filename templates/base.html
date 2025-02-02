@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <!-- Favicon from Icons8 -->
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=IZh9flxscPig&format=png&color=000000" type="image/x-icon">
+    <!-- Add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="{% url 'home' %}" class="text-xl font-bold flex items-center space-x-2">
+                <img src="https://img.icons8.com/?size=100&id=IZh9flxscPig&format=png&color=000000" alt="SMS Icon" class="h-8 w-8">
+                <span>Student Management System</span>
+            </a>
+            
+            <div class="space-x-4">
+                <a href="{% url 'student_list' %}" class="hover:text-blue-200">Students</a>
+                <a href="{% url 'student_add' %}" class="bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded">
+                    Add Student
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 mt-8 flex-grow">
+        {% if messages %}
+        <div class="mb-4">
+            {% for message in messages %}
+            <div class="px-4 py-2 rounded {% if message.tags == 'success' %}bg-green-100 text-green-800{% else %}bg-red-100 text-red-800{% endif %}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- New Footer -->
+   
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">
+                &copy; {% now "Y" %} Student Management System. All rights reserved.
+            </p>
+            <p class="text-xs text-gray-400 mt-2">
+                Developed with Django and Tailwind CSS
+            </p>
+            <small class="text-xs text-gray-400 mt-2">
+                Developed By 
+                <a href="https://github.com/mdOmarfaruk151" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="text-gray-300 hover:text-white transition-colors">
+                    Md. Omar Faruk
+                </a>
+            </small>
+        </div>
+    </footer>
+</body>
+</html>
