@@ -1,8 +1,8 @@
 
 # Student Management System 🎓
 
-[![Django](https://img.shields.io/badge/Django-3.2-green)](https://www.djangoproject.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-blue)](https://tailwindcss.com/)
+[![Django](https://img.shields.io/badge/Django-5.1.5-green)](https://www.djangoproject.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-blue)](https://tailwindcss.com/)
 
 A modern web application for managing student records with full CRUD operations, built with Django and Tailwind CSS.
 
@@ -54,11 +54,11 @@ A modern web application for managing student records with full CRUD operations,
 
 **Backend**
 - Python 3.9+
-- Django 3.2
+- Django 5.1.5
 - SQLite (Development)
 
 **Frontend**
-- Tailwind CSS 3.0
+- Tailwind CSS 4.0
 - HTML5
 - Django Templates
 
